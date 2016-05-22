@@ -97,6 +97,41 @@ public class Runner {
         for (int i = 0; i < 100; i++) {
             int start = (int) System.currentTimeMillis();
             for (int j = 0; j < add10000.size(); j++)
+                add10000.remove(j);
+            int stop = (int) System.currentTimeMillis();
+            int timeResult = stop - start;
+            timeResult1.add(timeResult);
+        }
+        int averageResultForRemove10000 = assessmentMethods.averageTime(timeResult1);
+
+
+        for (int i = 0; i < 100; i++) {
+            int start = (int) System.currentTimeMillis();
+            for (int j=0;j<add100000.size();j++)
+                add100000.remove(j);
+            int stop = (int) System.currentTimeMillis();
+            int timeResult = stop - start;
+            timeResult2.add(timeResult);
+        }
+        int averageResultForRemove100000 = assessmentMethods.averageTime(timeResult2);
+
+
+        for (int i = 0; i < 10; i++) {
+            int start = (int) System.currentTimeMillis();
+            for (int j=0;j<add1000000.size();j++)
+                add1000000.remove(j);
+            int stop = (int) System.currentTimeMillis();
+            int timeResult = stop - start;
+            timeResult3.add(timeResult);
+        }
+        int averageResultForRemove1000000 = assessmentMethods.averageTime(timeResult3);
+        timeResult1.clear();
+        timeResult2.clear();
+        timeResult3.clear();
+
+        for (int i = 0; i < 100; i++) {
+            int start = (int) System.currentTimeMillis();
+            for (int j = 0; j < add10000.size(); j++)
                 add10000.contains(00);
             int stop = (int) System.currentTimeMillis();
             int timeResult = stop - start;
@@ -172,41 +207,6 @@ public class Runner {
         }
 
         int averageResultForIteratorAdd1000000 = assessmentMethods.averageTime(timeResult3);
-        timeResult1.clear();
-        timeResult2.clear();
-        timeResult3.clear();
-
-        for (int i = 0; i < 100; i++) {
-            int start = (int) System.currentTimeMillis();
-            for (int j = 0; j < add10000.size(); j++)
-                add10000.remove(j);
-            int stop = (int) System.currentTimeMillis();
-            int timeResult = stop - start;
-            timeResult1.add(timeResult);
-        }
-        int averageResultForRemove10000 = assessmentMethods.averageTime(timeResult1);
-
-
-        for (int i = 0; i < 100; i++) {
-            int start = (int) System.currentTimeMillis();
-            for (int j=0;j<add100000.size();j++)
-                add100000.remove(j);
-            int stop = (int) System.currentTimeMillis();
-            int timeResult = stop - start;
-            timeResult2.add(timeResult);
-        }
-        int averageResultForRemove100000 = assessmentMethods.averageTime(timeResult2);
-
-
-        for (int i = 0; i < 10; i++) {
-            int start = (int) System.currentTimeMillis();
-            for (int j=0;j<add1000000.size();j++)
-                add1000000.remove(j);
-            int stop = (int) System.currentTimeMillis();
-            int timeResult = stop - start;
-            timeResult3.add(timeResult);
-        }
-        int averageResultForRemove1000000 = assessmentMethods.averageTime(timeResult3);
 
         timeResult1.clear();
         timeResult2.clear();
@@ -254,7 +254,7 @@ public class Runner {
 
         int averageResultForIteratorRemove1000000 = assessmentMethods.averageTime(timeResult3);
 
-        System.out.println();
+
     }
 }
 
