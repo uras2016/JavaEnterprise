@@ -17,42 +17,12 @@ public class AssessmentMethods {
     }
 
 
-    public ArrayList<Integer> add(ArrayList<Integer> array, int size){
+    public ArrayList<Integer> add(ArrayList<Integer> array, int size) {
         Random random = new Random();
         for (int i = 0; i < size; i++) {
-            array.add(random.nextInt());
+            array.add(random.nextInt(1000));
         }
         return array;
-    }
-
-
-
-
-
-
-
-
-    public long addForList(ArrayList<Integer> array) {
-
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < array.size(); i++) {
-            array.add((int) Math.random());
-        }
-        long stop = System.currentTimeMillis();
-        long timeResult = stop - start;
-        return timeResult;
-
-    }
-    public long getForList(ArrayList<Long> array) {
-
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < array.size(); i++) {
-            array.get(i);
-        }
-        long stop = System.currentTimeMillis();
-        long timeResult = stop - start;
-        return timeResult;
-
     }
 
 }
