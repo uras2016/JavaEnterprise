@@ -15,12 +15,12 @@ public class AssessmentMethods {
         result = sum / array.size();
         return result;
     }
-
+//random.nextInt(1000)
 
     public ArrayList<Integer> add(ArrayList<Integer> array, int size) {
         Random random = new Random();
         for (int i = 0; i < size; i++) {
-            array.add(random.nextInt(1000));
+            array.add(i);
         }
         return array;
     }
