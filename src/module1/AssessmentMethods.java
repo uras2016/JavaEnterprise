@@ -1,8 +1,9 @@
-package module1.ArrayList;
+package module1;
 
 import java.util.ArrayList;
+
+import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.Random;
 
 
 public class AssessmentMethods {
@@ -16,23 +17,30 @@ public class AssessmentMethods {
         result = sum / array.size();
         return result;
     }
-//random.nextInt(1000)
+
 
     public ArrayList<Integer> addForArrayList(ArrayList<Integer> array, int size) {
-        Random random = new Random();
+
         for (int i = 0; i < size; i++) {
             array.add(i);
         }
         return array;
     }
     public LinkedList<Integer> addForLinkedList(LinkedList<Integer> array, int size) {
-        Random random = new Random();
+
         for (int i = 0; i < size; i++) {
             array.add(i);
         }
         return array;
     }
 
+    public HashSet<Integer> addForHashSet(HashSet<Integer> set, int size) {
+
+        for (int i = 0; i < size; i++) {
+            set.add(i);
+        }
+        return set;
+    }
 
 
 

@@ -1,4 +1,4 @@
-package module1.ArrayList;
+package module1;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
