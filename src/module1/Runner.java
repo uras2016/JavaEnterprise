@@ -6,8 +6,11 @@ public class Runner {
 
         ArrayListRealization arrayListRealization = new ArrayListRealization();
         LinkedListRealization linkedListRealization = new LinkedListRealization();
+        HashSets hashSets = new HashSets();
 
         arrayListRealization.list();
         linkedListRealization.linkedList();
+        hashSets.hashSet();
+
     }
 }

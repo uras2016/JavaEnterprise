@@ -7,7 +7,8 @@ import java.util.ListIterator;
 
 
 public class HashSets{
-    public static void main(String[] args) {
+
+    public static void hashSet() {
         final int SIZE1 = 10000;
         final int SIZE2 = 100000;
         final int SIZE3 = 1000000;
