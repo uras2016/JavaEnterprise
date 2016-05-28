@@ -1,10 +1,7 @@
 package module11;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 
-
-public class ArrayListRunner extends MethodsForList {
+public class ArrayListRunner extends Methods {
 
 
     public void runner() {
@@ -13,9 +10,7 @@ public class ArrayListRunner extends MethodsForList {
         java.util.ArrayList<Integer> array100k = new java.util.ArrayList<Integer>();
         java.util.ArrayList<Integer> array1000k = new java.util.ArrayList<Integer>();
 
-        LinkedList<Integer> linked10k = new LinkedList<Integer>();
-        LinkedList<Integer> linked100k= new LinkedList<Integer>();
-        LinkedList<Integer> linked1000k = new LinkedList<Integer>();
+
 
         String timeForPopulate10 = Long.toString(getAverageTimeForPopulate(array10k, SIZE1));
         String timeForPopulate100 = Long.toString(getAverageTimeForPopulate(array100k, SIZE2));
@@ -46,7 +41,7 @@ public class ArrayListRunner extends MethodsForList {
         String timeForIteratorRemove1000 = Long.toString(getAverageTimeForIteratorRemove(array1000k));
 
 
-//        System.out.println(timeForAdd10 +" "+ timeForGet10 +" "+ timeForRemove10 +" "+ timeForContains10 +" "+ timeForPopulate10 +" "+ timeForIteratorAdd10 +" "+ timeForIteratorRemove10);
+        System.out.println(timeForAdd10 +" "+ timeForGet10 +" "+ timeForRemove10 +" "+ timeForContains10 +" "+ timeForPopulate10 +" "+ timeForIteratorAdd10 +" "+ timeForIteratorRemove10);
 
 
 

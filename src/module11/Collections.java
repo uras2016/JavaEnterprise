@@ -2,6 +2,7 @@ package module11;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public interface Collections {
     int REPETITION = 100;
@@ -17,6 +18,14 @@ public interface Collections {
     long getAverageTimeForPopulate(List<Integer> list, int size);
     long getAverageTimeForIteratorAdd(List<Integer> list);
     long getAverageTimeForIteratorRemove(List<Integer> list);
+
+
+    long getAverageTimeForAdd(Set<Integer> set);
+    long getAverageTimeForGet(Set<Integer> set);
+    long getAverageTimeForRemove(Set<Integer> set);
+    long getAverageTimeForContains(Set<Integer> set);
+    long getAverageTimeForPopulate(Set<Integer> set, int size);
+
 
     long getAverageTime(ArrayList<Long> list);
 
