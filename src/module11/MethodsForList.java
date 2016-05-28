@@ -85,15 +85,39 @@ public class MethodsForList implements Collections{
 
     @Override
     public long getAverageTimeForIteratorAdd(List<Integer> list) {
-        ListIterator<Integer> listIterator100 = list.listIterator();
+        ListIterator<Integer> litr = list.listIterator();
+        averageTimeRecords = new ArrayList<Long>();
+        long result =0;
+        for (int i = 0; i<REPETITION;i++) {
+            long startTime = System.nanoTime();
+            while (litr.hasPrevious()){
+                litr.add(5);
+            }
+            result = System.nanoTime() - startTime;
+            averageTimeRecords.add(result);
+        }
 
-        return 0;
-    }
+        return getAverageTime(averageTimeRecords);
+        }
+
 
     @Override
-    public long getAverageTimeForIteratorRemove() {
-        return 0;
+    public long getAverageTimeForIteratorRemove(List<Integer> list) {
+        ListIterator<Integer> litr = list.listIterator();
+        averageTimeRecords = new ArrayList<Long>();
+        long result =0;
+        for (int i = 0; i<REPETITION;i++) {
+            long startTime = System.nanoTime();
+            while (litr.hasPrevious()){
+                litr.remove();
+            }
+            result = System.nanoTime() - startTime;
+            averageTimeRecords.add(result);
+        }
+
+        return getAverageTime(averageTimeRecords);
     }
+
 
     @Override
     public long getAverageTime(ArrayList<Long> list) {

@@ -16,7 +16,7 @@ public interface Collections {
     long getAverageTimeForContains(List<Integer> list);
     long getAverageTimeForPopulate(List<Integer> list, int size);
     long getAverageTimeForIteratorAdd(List<Integer> list);
-    long getAverageTimeForIteratorRemove();
+    long getAverageTimeForIteratorRemove(List<Integer> list);
 
     long getAverageTime(ArrayList<Long> list);
 
