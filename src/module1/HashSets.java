@@ -159,107 +159,12 @@ public class HashSets{
         }
         int averageResultForContains1000000 = assessmentMethods.averageTime(timeResult3);
 
-//        timeResult1.clear();
-//        timeResult2.clear();
-//        timeResult3.clear();
-//
-//        ListIterator<Integer> listIterator10 = add10000.listIterator();
-//
-//
-//        for (int i = 0; i < 100; i++) {
-//            int start = (int) System.currentTimeMillis();
-//            while (listIterator10.hasNext()) {
-//                listIterator10.add(5);
-//            }
-//            int stop = (int) System.currentTimeMillis();
-//            int timeResult = stop - start;
-//            timeResult1.add(timeResult);
-//        }
-//
-//        int averageResultForIteratorAdd10000 = assessmentMethods.averageTime(timeResult1);
-//
-//        ListIterator<Integer> listIterator100 = add100000.listIterator();
-//
-//
-//        for (int i = 0; i < 100; i++) {
-//            int start = (int) System.currentTimeMillis();
-//            while (listIterator100.hasNext()) {
-//                listIterator100.add(5);
-//            }
-//            int stop = (int) System.currentTimeMillis();
-//            int timeResult = stop - start;
-//            timeResult2.add(timeResult);
-//        }
-//
-//        int averageResultForIteratorAdd100000 = assessmentMethods.averageTime(timeResult2);
-//
-//        ListIterator<Integer> listIterator1000 = add1000000.listIterator();
-
-
-//        for (int i = 0; i < 100; i++) {
-//            int start = (int) System.currentTimeMillis();
-//            while (listIterator1000.hasNext()) {
-//                listIterator1000.add(5);
-//            }
-//            int stop = (int) System.currentTimeMillis();
-//            int timeResult = stop - start;
-//            timeResult3.add(timeResult);
-//        }
-
-//        int averageResultForIteratorAdd1000000 = assessmentMethods.averageTime(timeResult3);
-
-//        timeResult1.clear();
-//        timeResult2.clear();
-//        timeResult3.clear();
-
-
-//        for (int i = 0; i < 100; i++) {
-//            int start = (int) System.currentTimeMillis();
-//            while (listIterator10.hasNext()) {
-//                listIterator10.remove();
-//            }
-//            int stop = (int) System.currentTimeMillis();
-//            int timeResult = stop - start;
-//            timeResult1.add(timeResult);
-//        }
-//
-//        int averageResultForIteratorRemove10000 = assessmentMethods.averageTime(timeResult1);
-//
-//
-//        for (int i = 0; i < 100; i++) {
-//            int start = (int) System.currentTimeMillis();
-//            while (listIterator100.hasNext()) {
-//                listIterator100.remove();
-//            }
-//            int stop = (int) System.currentTimeMillis();
-//            int timeResult = stop - start;
-//            timeResult2.add(timeResult);
-//        }
-//
-//        int averageResultForIteratorRemove100000 = assessmentMethods.averageTime(timeResult2);
-//
-//
-//        for (int i = 0; i < 100; i++) {
-//            int start = (int) System.currentTimeMillis();
-//            while (listIterator1000.hasNext()) {
-//                listIterator1000.remove();
-//            }
-//            int stop = (int) System.currentTimeMillis();
-//            int timeResult = stop - start;
-//            timeResult3.add(timeResult);
-//        }
-//
-//        int averageResultForIteratorRemove1000000 = assessmentMethods.averageTime(timeResult3);
 
         System.out.printf(
                 averageResultForAdd10000 + " " + averageResultForAdd100000 + " " + averageResultForAdd1000000 + " " +
                         averageResultForGet10000 + " " + averageResultForGet100000 + " " + averageResultForGet1000000 + " " +
                         averageResultForRemove10000 + " " + averageResultForRemove100000 + " " + averageResultForRemove1000000 + " " +
                         averageResultForContains10000 + " " + averageResultForContains100000 + " " + averageResultForContains1000000);
-//                        + " " +
-//                        averageResultForIteratorAdd10000 + " " + averageResultForIteratorAdd100000 + " " + averageResultForIteratorAdd1000000 + " " +
-//                        averageResultForIteratorRemove10000 + " " + averageResultForIteratorRemove100000 + " " + averageResultForIteratorRemove1000000
-
 
     }
 
