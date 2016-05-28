@@ -13,7 +13,6 @@ public class ArrayListRunner extends Methods {
         ArrayList<Integer> array1000k = new ArrayList<Integer>();
 
 
-
         String timeForPopulate10 = Long.toString(getAverageTimeForPopulate(array10k, SIZE1));
         String timeForPopulate100 = Long.toString(getAverageTimeForPopulate(array100k, SIZE2));
         String timeForPopulate1000 = Long.toString(getAverageTimeForPopulate(array1000k, SIZE3));
@@ -43,9 +42,7 @@ public class ArrayListRunner extends Methods {
         String timeForIteratorRemove1000 = Long.toString(getAverageTimeForIteratorRemove(array1000k));
 
 
-        System.out.println(timeForAdd10 +" "+ timeForGet10 +" "+ timeForRemove10 +" "+ timeForContains10 +" "+ timeForPopulate10 +" "+ timeForIteratorAdd10 +" "+ timeForIteratorRemove10);
-
-
+        System.out.println(timeForAdd10 + " " + timeForGet10 + " " + timeForRemove10 + " " + timeForContains10 + " " + timeForPopulate10 + " " + timeForIteratorAdd10 + " " + timeForIteratorRemove10);
 
 
     }

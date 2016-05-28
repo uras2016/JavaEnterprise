@@ -29,7 +29,7 @@ public class TreeSetRunner extends Methods {
         String timeForRemove100 = Long.toString(getAverageTimeForRemove(tree100k));
         String timeForRemove1000 = Long.toString(getAverageTimeForRemove(tree1000k));
 
-        System.out.println(timeForAdd10 +" "+ timeForGet10 +" "+ timeForRemove10 +" "+ timeForContains10 +" "+ timeForPopulate10);
+        System.out.println(timeForAdd10 + " " + timeForGet10 + " " + timeForRemove10 + " " + timeForContains10 + " " + timeForPopulate10);
     }
 }
 

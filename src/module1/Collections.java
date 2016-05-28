@@ -12,23 +12,32 @@ public interface Collections {
 
 
     long getAverageTimeForAdd(List<Integer> list);
+
     long getAverageTimeForGet(List<Integer> list);
+
     long getAverageTimeForRemove(List<Integer> list);
+
     long getAverageTimeForContains(List<Integer> list);
+
     long getAverageTimeForPopulate(List<Integer> list, int size);
+
     long getAverageTimeForIteratorAdd(List<Integer> list);
+
     long getAverageTimeForIteratorRemove(List<Integer> list);
 
 
     long getAverageTimeForAdd(Set<Integer> set);
+
     long getAverageTimeForGet(Set<Integer> set);
+
     long getAverageTimeForRemove(Set<Integer> set);
+
     long getAverageTimeForContains(Set<Integer> set);
+
     long getAverageTimeForPopulate(Set<Integer> set, int size);
 
 
     long getAverageTime(ArrayList<Long> list);
-
 
 
 }

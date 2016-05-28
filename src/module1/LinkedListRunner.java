@@ -2,10 +2,10 @@ package module1;
 
 import java.util.LinkedList;
 
-public class LinkedListRunner  extends Methods {
+public class LinkedListRunner extends Methods {
     public void runner() {
         LinkedList<Integer> linked10k = new LinkedList<Integer>();
-        LinkedList<Integer> linked100k= new LinkedList<Integer>();
+        LinkedList<Integer> linked100k = new LinkedList<Integer>();
         LinkedList<Integer> linked1000k = new LinkedList<Integer>();
 
         String timeForPopulate10 = Long.toString(getAverageTimeForPopulate(linked10k, SIZE1));
@@ -37,7 +37,7 @@ public class LinkedListRunner  extends Methods {
         String timeForIteratorRemove1000 = Long.toString(getAverageTimeForIteratorRemove(linked1000k));
 
 
-        System.out.println(timeForAdd10 +" "+ timeForGet10 +" "+ timeForRemove10 +" "+ timeForContains10 +" "+ timeForPopulate10 +" "+ timeForIteratorAdd10 +" "+ timeForIteratorRemove10);
+        System.out.println(timeForAdd10 + " " + timeForGet10 + " " + timeForRemove10 + " " + timeForContains10 + " " + timeForPopulate10 + " " + timeForIteratorAdd10 + " " + timeForIteratorRemove10);
 
     }
 }

@@ -1,6 +1,5 @@
 package module1;
 
-import module1.HashSets;
 
 public class Main {
     public static void main(String[] args) {
