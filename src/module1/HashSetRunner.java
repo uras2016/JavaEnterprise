@@ -33,15 +33,15 @@ public class HashSetRunner extends Methods {
 
         String text;
 
-        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "HashSet", "10K", timeForAdd10, timeForGet10, timeForRemove10, timeForContains10, timeForPopulate10, "-", "-");
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "|HashSet", "|10K", timeForAdd10, timeForGet10, timeForRemove10, timeForContains10, timeForPopulate10, "-", "-");
         System.out.println(text);
         printMethods.update("module1.txt", text);
 
-        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "100K", timeForAdd100, timeForGet100, timeForRemove100, timeForContains100, timeForPopulate10, "-", "-");
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "|100K", timeForAdd100, timeForGet100, timeForRemove100, timeForContains100, timeForPopulate10, "-", "-");
         System.out.println(text);
         printMethods.update("module1.txt", text);
 
-        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "1000K", timeForAdd1000, timeForGet1000, timeForRemove1000, timeForContains1000, timeForPopulate100, "-", "-");
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "|1000K", timeForAdd1000, timeForGet1000, timeForRemove1000, timeForContains1000, timeForPopulate100, "-", "-");
         System.out.println(text);
         printMethods.update("module1.txt", text);
     }
