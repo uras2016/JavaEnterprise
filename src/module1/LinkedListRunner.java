@@ -1,9 +1,11 @@
 package module1;
 
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 
 public class LinkedListRunner extends Methods {
-    public void runner() {
+    PrintMethods printMethods = new PrintMethods();
+    public void runner() throws FileNotFoundException {
         LinkedList<Integer> linked10k = new LinkedList<Integer>();
         LinkedList<Integer> linked100k = new LinkedList<Integer>();
         LinkedList<Integer> linked1000k = new LinkedList<Integer>();
@@ -36,8 +38,20 @@ public class LinkedListRunner extends Methods {
         String timeForIteratorRemove100 = Long.toString(getAverageTimeForIteratorRemove(linked100k));
         String timeForIteratorRemove1000 = Long.toString(getAverageTimeForIteratorRemove(linked1000k));
 
+        String text;
 
-        System.out.println(timeForAdd10 + " " + timeForGet10 + " " + timeForRemove10 + " " + timeForContains10 + " " + timeForPopulate10 + " " + timeForIteratorAdd10 + " " + timeForIteratorRemove10);
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "LinkedList", "10K", timeForAdd10, timeForGet10, timeForRemove10, timeForContains10, timeForPopulate10, timeForIteratorAdd10, timeForIteratorRemove10);
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
+
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "100K", timeForAdd100, timeForGet100, timeForRemove100, timeForContains100, timeForPopulate10, timeForIteratorAdd100, timeForIteratorRemove100);
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
+
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "1000K", timeForAdd1000, timeForGet1000, timeForRemove1000, timeForContains1000, timeForPopulate100, timeForIteratorAdd1000, timeForIteratorRemove1000);
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
+
 
     }
 }

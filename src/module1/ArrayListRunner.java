@@ -1,20 +1,22 @@
 package module1;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 
 public class ArrayListRunner extends Methods {
-
-
-    public void runner() {
+    PrintMethods printMethods = new PrintMethods();
+    String timeForPopulate10;
+    String timeForPopulate100;
+    public void runner() throws FileNotFoundException {
 
         ArrayList<Integer> array10k = new ArrayList<Integer>();
         ArrayList<Integer> array100k = new ArrayList<Integer>();
         ArrayList<Integer> array1000k = new ArrayList<Integer>();
 
 
-        String timeForPopulate10 = Long.toString(getAverageTimeForPopulate(array10k, SIZE1));
-        String timeForPopulate100 = Long.toString(getAverageTimeForPopulate(array100k, SIZE2));
+        timeForPopulate10 = Long.toString(getAverageTimeForPopulate(array10k, SIZE1));
+        timeForPopulate100 = Long.toString(getAverageTimeForPopulate(array100k, SIZE2));
         String timeForPopulate1000 = Long.toString(getAverageTimeForPopulate(array1000k, SIZE3));
 
         String timeForAdd10 = Long.toString(getAverageTimeForAdd(array10k));
@@ -41,9 +43,21 @@ public class ArrayListRunner extends Methods {
         String timeForIteratorRemove100 = Long.toString(getAverageTimeForIteratorRemove(array100k));
         String timeForIteratorRemove1000 = Long.toString(getAverageTimeForIteratorRemove(array1000k));
 
+        String text;
 
-        System.out.println(timeForAdd10 + " " + timeForGet10 + " " + timeForRemove10 + " " + timeForContains10 + " " + timeForPopulate10 + " " + timeForIteratorAdd10 + " " + timeForIteratorRemove10);
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "ArrayList", "10K", timeForAdd10, timeForGet10, timeForRemove10, timeForContains10, timeForPopulate10, timeForIteratorAdd10, timeForIteratorRemove10);
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
+
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "100K", timeForAdd100, timeForGet100, timeForRemove100, timeForContains100, timeForPopulate10, timeForIteratorAdd100, timeForIteratorRemove100);
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
+
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "1000K", timeForAdd1000, timeForGet1000, timeForRemove1000, timeForContains1000, timeForPopulate100, timeForIteratorAdd1000, timeForIteratorRemove1000);
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
 
 
     }
+
 }

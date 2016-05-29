@@ -1,9 +1,11 @@
 package module1;
 
+import java.io.FileNotFoundException;
 import java.util.TreeSet;
 
 public class TreeSetRunner extends Methods {
-    public void runner() {
+    PrintMethods printMethods = new PrintMethods();
+    public void runner() throws FileNotFoundException {
 
         TreeSet<Integer> tree10k = new TreeSet<Integer>();
         TreeSet<Integer> tree100k = new TreeSet<Integer>();
@@ -29,7 +31,19 @@ public class TreeSetRunner extends Methods {
         String timeForRemove100 = Long.toString(getAverageTimeForRemove(tree100k));
         String timeForRemove1000 = Long.toString(getAverageTimeForRemove(tree1000k));
 
-        System.out.println(timeForAdd10 + " " + timeForGet10 + " " + timeForRemove10 + " " + timeForContains10 + " " + timeForPopulate10);
+        String text;
+
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "TreeSet", "10K", timeForAdd10, timeForGet10, timeForRemove10, timeForContains10, timeForPopulate10, "-", "-");
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
+
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "100K", timeForAdd100, timeForGet100, timeForRemove100, timeForContains100, timeForPopulate10, "-", "-");
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
+
+        text = String.format("%-15s%-8s%-12s%-12s%-12s%-12s%-12s%-15s%-15s%n", "", "1000K", timeForAdd1000, timeForGet1000, timeForRemove1000, timeForContains1000, timeForPopulate100, "-", "-");
+        System.out.println(text);
+        printMethods.update("module1.txt", text);
     }
 }
 
