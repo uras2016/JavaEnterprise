@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 public class LinkedListRunner extends Methods {
     PrintMethods printMethods = new PrintMethods();
+
     public void runner() throws FileNotFoundException {
         LinkedList<Integer> linked10k = new LinkedList<Integer>();
         LinkedList<Integer> linked100k = new LinkedList<Integer>();

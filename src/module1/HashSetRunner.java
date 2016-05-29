@@ -5,6 +5,7 @@ import java.util.HashSet;
 
 public class HashSetRunner extends Methods {
     PrintMethods printMethods = new PrintMethods();
+
     public void runner() throws FileNotFoundException {
 
         HashSet<Integer> hash10k = new HashSet<Integer>();

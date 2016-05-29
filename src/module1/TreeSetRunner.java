@@ -5,6 +5,7 @@ import java.util.TreeSet;
 
 public class TreeSetRunner extends Methods {
     PrintMethods printMethods = new PrintMethods();
+
     public void runner() throws FileNotFoundException {
 
         TreeSet<Integer> tree10k = new TreeSet<Integer>();

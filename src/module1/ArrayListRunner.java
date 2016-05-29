@@ -8,6 +8,7 @@ public class ArrayListRunner extends Methods {
     PrintMethods printMethods = new PrintMethods();
     String timeForPopulate10;
     String timeForPopulate100;
+
     public void runner() throws FileNotFoundException {
 
         ArrayList<Integer> array10k = new ArrayList<Integer>();
