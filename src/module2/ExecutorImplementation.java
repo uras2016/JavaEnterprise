@@ -12,28 +12,37 @@ public class ExecutorImplementation<T> implements Executor<T> {
 
     @Override
     public void addTask(Task<? extends T> task) throws Exceptions{
-        if (isExecute)throw new Exceptions("method execute() have already been running");
+        if (isExecute)throw new Exceptions("method execute() has already been running");
         tasks.add(task);
         validTasks.add(task.getResult());
     }
 
+
     @Override
-    public void addTask(Task<? extends T> task, Validator<? super T> validator) {
+    public void addTask(Task<? extends T> task, Validator<? super T> validator) throws Exceptions {
+        if (isExecute)throw new Exceptions("method execute() has already been running");
+        tasks.add(task);
+        if (validator.isValid(task.getResult())) validTasks.add(task.getResult());
+        else inValidTasks.add(task.getResult());
 
     }
 
     @Override
     public void execute() {
-
+    isExecute = true;
     }
 
     @Override
     public List<T> getValidResults() throws Exceptions {
-        return null;
+        if (!isExecute) throw new Exceptions("method Execute() was not run");
+
+        return validTasks;
     }
 
     @Override
     public List<T> getInvalidResults() throws Exceptions {
-        return null;
+        if (!isExecute) throw new Exceptions("method Execute() was not run");
+
+        return inValidTasks;
     }
 }
