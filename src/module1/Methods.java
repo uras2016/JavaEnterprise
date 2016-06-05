@@ -88,6 +88,7 @@ public class Methods implements Collections {
         for (int i = 0; i < REPETITION; i++) {
             long startTime = System.nanoTime();
             while (litr.hasPrevious()) {
+                litr.previous();
                 litr.add(5);
             }
             result = System.nanoTime() - startTime;
@@ -106,6 +107,7 @@ public class Methods implements Collections {
         for (int i = 0; i < REPETITION; i++) {
             long startTime = System.nanoTime();
             while (litr.hasPrevious()) {
+                litr.previous();
                 litr.remove();
             }
             result = System.nanoTime() - startTime;

@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
+        long start = System.currentTimeMillis();
+
         ArrayListRunner arrayListRunner = new ArrayListRunner();
         LinkedListRunner linkedListRunner = new LinkedListRunner();
         HashSetRunner hashSetRunner = new HashSetRunner();
@@ -48,6 +50,8 @@ public class Main {
         text = "------------------------------------------------------------------------------------------------------------------";
         System.out.println(text);
         printMethods.update("module1.txt", text);
+
+        System.out.println(System.currentTimeMillis()-start);
 
     }
 
