@@ -1,22 +1,21 @@
 package module2;
 
-public class Tasks implements Task<Long> {
-    Long number;
-    Long res = 0L;
+public class Tasks<T extends Number> implements Task<T> {
+    T number;
+    T res;
 
-    public Tasks(Long number) {
-        this.number = number;
+    public Tasks(T number) {
+        res = number;
 
     }
 
     @Override
     public void execute() {
-        res = number+10;
 
     }
 
     @Override
-    public Long getResult() {
+    public T getResult() {
         return res;
     }
 }
