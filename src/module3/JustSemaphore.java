@@ -1,11 +1,11 @@
 package module3;
 
 public class JustSemaphore implements Semaphore {
-    private final int maxPermits;
+    private int maxPermits;
     private final Object lock = new Object();
     private int permits;
 
-    public JustSemaphore(int maxPermits, int permits) {
+    public JustSemaphore(int permits) {
         this.permits = permits;
         this.maxPermits = maxPermits;
     }
@@ -61,5 +61,16 @@ public class JustSemaphore implements Semaphore {
 
             return permits;
         }
+    }
+
+    public static void main(String[] args) {
+        JustSemaphore semaphore = new JustSemaphore(30);
+        synchronized (semaphore){
+            int permits  = semaphore.getAvailablePermits();
+            semaphore.release(10-permits);
+
+        }
+
+
     }
 }
