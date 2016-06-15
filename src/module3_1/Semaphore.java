@@ -1,4 +1,4 @@
-package module3;
+package module3_1;
 
 public interface Semaphore {
 
