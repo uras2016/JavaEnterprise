@@ -12,9 +12,9 @@ public class ExecutorImplementationTest {
 
         List<Task<Long>> list = new ArrayList<Task<Long>>();
 
-        list.add(new Tasks<>(10L));
-        list.add(new Tasks<>(100L));
-        list.add(new Tasks<>(15L));
+        list.add(new NumberTasks(10L));
+        list.add(new NumberTasks(100L));
+        list.add(new NumberTasks(15L));
         test1(list);
     }
 
@@ -22,10 +22,10 @@ public class ExecutorImplementationTest {
         for (Task<Long> task : tasks) {
             executor.addTask(task);
         }
-        executor.addTask(new Tasks(10L), val);
-        executor.addTask(new Tasks(1L), val);
-        executor.addTask(new Tasks(3L), val);
-        executor.addTask(new Tasks(0L), val);
+        executor.addTask(new NumberTasks(10L), val);
+        executor.addTask(new NumberTasks(1L), val);
+        executor.addTask(new NumberTasks(3L), val);
+        executor.addTask(new NumberTasks(0L), val);
         executor.execute();
 
 
