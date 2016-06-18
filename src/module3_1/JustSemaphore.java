@@ -67,7 +67,7 @@ public class JustSemaphore implements Semaphore {
         JustSemaphore semaphore = new JustSemaphore(30);
         synchronized (semaphore){
             int permits  = semaphore.getAvailablePermits();
-            semaphore.release(10-permits);
+            semaphore.release(30-permits);
 
         }
 
