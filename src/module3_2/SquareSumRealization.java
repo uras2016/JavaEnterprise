@@ -1,13 +1,10 @@
 package module3_2;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.*;
 
 public class SquareSumRealization implements SquareSum {
-
-
 
 
     @Override
@@ -17,18 +14,28 @@ public class SquareSumRealization implements SquareSum {
         ExecutorService service = Executors.newFixedThreadPool(numberOfThreads);
 
 
-        int part = values.length/numberOfThreads;
+        int part = values.length / numberOfThreads;
 
-        List<Long> runnables = Collections.synchronizedList(new ArrayList<>());
+        List<Long> callables = new ArrayList<>();
         Phaser phaser = new Phaser(1);
         int start = 0;
         int end = part;
         for (int i = 0; i < numberOfThreads; i++) {
             if (i + 1 == numberOfThreads) end = values.length;
-            Future<Long> f = service.submit(new MyCallable(values, start, end, runnables, phaser));
+            Future<Long> f = service.submit(new MyCallable(values, start, end, callables, phaser));
+
+
+            try {
+                System.out.println(f.get());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
             phaser.register();
-            start= start+part;
-            end = end+part;
+            start = start + part;
+            end = end + part;
+
         }
 
 
@@ -37,18 +44,16 @@ public class SquareSumRealization implements SquareSum {
         service.shutdown();
 
 
-        long finalResult =0;
-        for (Long number : runnables) {
-            finalResult+=number;
+        long finalResult = 0;
+        for (Long number : callables) {
+            finalResult += number;
+
         }
         return finalResult;
     }
 
 
-
-
-
-    public class MyCallable implements Callable<Long>{
+    public class MyCallable implements Callable<Long> {
         int[] values;
         int start;
         int end;
@@ -77,10 +82,9 @@ public class SquareSumRealization implements SquareSum {
             ph.arriveAndDeregister();
 
             return sum;
+
         }
     }
-
-
 
 
 }
